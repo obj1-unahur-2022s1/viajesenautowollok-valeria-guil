@@ -1,0 +1,28 @@
+import remiseras.*
+import clientes.*
+import oficinaCooperativa.*
+
+
+test "LaRemiseraElegidaEntreRosana-JuanaEnUnViajeDe10KilómetrosParaAnaMaríaEsJuana" {
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(roxana,oficina.primeraRemiseraAhora())
+	assert.equals(juana,oficina.segundaRemiseraAhora())
+	assert.equals(juana,oficina.remiseraElegidaParaViaje(anaMaria,10))
+}
+
+test "LaRemiseraElegidaEntreRosana-JuanaEnUnViajeDe10KilometrosATeresaEsRoxana" {
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(roxana,oficina.primeraRemiseraAhora())
+	assert.equals(juana,oficina.segundaRemiseraAhora())
+	assert.equals(roxana,oficina.remiseraElegidaParaViaje(teresa,10))
+}
+
+test "LaRemiseraElegidaEntreRosana-JuanaEnUnViajeDe4KilometrosATeresaEsRoxana" {
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(roxana,oficina.primeraRemiseraAhora())
+	assert.equals(juana,oficina.segundaRemiseraAhora())
+	assert.equals(roxana,oficina.remiseraElegidaParaViaje(teresa,4))
+}
+
+
+

@@ -1,0 +1,92 @@
+import remiseras.*
+import clientes.*
+import oficinaCooperativa.*
+
+test "CuantoCobraUnViajeDe10KilometrosRoxana" {
+	
+	assert.that(anaMaria.estaEconomicamenteEstable())
+	
+	assert.equals(180, roxana.precioViaje(ludmila,10))
+	assert.equals(300, roxana.precioViaje(anaMaria,10))
+	assert.equals(220, roxana.precioViaje(teresa,10))
+}
+
+test "CuantoCobraUnViajeDe10KilometrosGabriela"  {
+	assert.equals(216, gabriela.precioViaje(ludmila,10))
+	assert.equals(360, gabriela.precioViaje(anaMaria,10))
+	assert.equals(264, gabriela.precioViaje(teresa,10))
+}
+
+test "CuantoCobraUnViajeDe10KilometrosMariela"  {
+	assert.equals(180, mariela.precioViaje(ludmila,10))
+	assert.equals(300, mariela.precioViaje(anaMaria,10))
+	assert.equals(220, mariela.precioViaje(teresa,10))
+}
+
+test "CuantoCobraUnViajeDe10KilometrosJuana"  {
+	assert.equals(200, juana.precioViaje(ludmila,10))
+	assert.equals(200, juana.precioViaje(anaMaria,10))
+	assert.equals(200, juana.precioViaje(teresa,10))
+}
+
+
+test "CuantoCobraUnViajeDe2KilometrosRoxana" {
+	assert.equals(36, roxana.precioViaje(ludmila,2))
+	assert.equals(60, roxana.precioViaje(anaMaria,2))
+	assert.equals(44, roxana.precioViaje(teresa,2))
+}
+
+test "CuantoCobraUnViajeDe2KilometrosGabriela"  {
+	assert.equals(43.20, gabriela.precioViaje(ludmila,2))
+	assert.equals(72, gabriela.precioViaje(anaMaria,2))
+	assert.equals(52.80, gabriela.precioViaje(teresa,2))
+}
+
+test "CuantoCobraUnViajeDe2KilometrosMariela"  {
+	assert.equals(50, mariela.precioViaje(ludmila,2))
+	assert.equals(60, mariela.precioViaje(anaMaria,2))
+	assert.equals(50, mariela.precioViaje(teresa,2))
+}
+
+test "CuantoCobraUnViajeDe2KilometrosJuana"  {
+	assert.equals(100, juana.precioViaje(ludmila,2))
+	assert.equals(100, juana.precioViaje(anaMaria,2))
+	assert.equals(100, juana.precioViaje(teresa,2))
+}
+
+test "Precio10KMLuciaReemplazandoAMarielaYMelinaTrabajandoParaLudmila" {
+	assert.equals(mariela,lucia.remiseraActual(mariela))
+	assert.equals(mariela,lucia.remiseraActual())
+	assert.equals(ludmila,melina.esEmpleadaDe(ludmila))
+	assert.equals(ludmila,melina.clienteActual())
+	assert.equals(150, lucia.precioViaje(melina,10))
+}
+ 
+test "Precio1KMLuciaReemplazandoAMarielaYMelinaTrabajandoParaLudmila" {
+	assert.equals(mariela,lucia.remiseraActual(mariela))
+	assert.equals(mariela,lucia.remiseraActual())
+	assert.equals(ludmila,melina.esEmpleadaDe(ludmila))
+	assert.equals(ludmila,melina.clienteActual())
+	assert.equals(50, lucia.precioViaje(melina,1))
+}
+
+ 
+test "Precio10KMLuciaReemplazandoAGabrielaYMelinaTrabajandoParaLudmila" {
+	assert.equals(gabriela,lucia.remiseraActual(gabriela))
+	assert.equals(gabriela,lucia.remiseraActual())
+	assert.equals(ludmila,melina.esEmpleadaDe(ludmila))
+	assert.equals(ludmila,melina.clienteActual())
+	assert.equals(180, lucia.precioViaje(melina,10))
+}
+ 
+test "Precio1KMLuciaReemplazandoAGabrielaYMelinaTrabajandoParaLudmila" {
+	assert.equals(gabriela,lucia.remiseraActual(gabriela))
+	assert.equals(gabriela,lucia.remiseraActual())
+	assert.equals(ludmila,melina.esEmpleadaDe(ludmila))
+	assert.equals(ludmila,melina.clienteActual())
+	assert.equals(18, lucia.precioViaje(melina,1))
+}
+
+
+ 
+ 
