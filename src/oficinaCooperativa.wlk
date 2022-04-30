@@ -1,3 +1,6 @@
+/*
+ * Oficina: Bien
+ */
 import remiseras.*
 import clientes.*
 
@@ -31,6 +34,7 @@ object oficina {
 	
 	
 	method intercambiarRemiseras() {
+		/*Bien reutilizando el método  asignarRemiseras*/
 		self.asignarRemiseras(segundaRemisera, primeraRemisera) 
 	}
 	
