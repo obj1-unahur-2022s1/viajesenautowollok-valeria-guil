@@ -1,3 +1,7 @@
+/*
+ * Test: Ok, tené en cuenta no mezclar dentro de un test distintos objetos que no esten realicionados. 
+ * Por ejemplo: El primer test mezca a anaMaria y Roxaan
+ */
 import remiseras.*
 import clientes.*
 import oficinaCooperativa.*

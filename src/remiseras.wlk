@@ -1,3 +1,6 @@
+/*
+ * Remiseras: Bien Menos
+ */
 import clientes.*
 import oficinaCooperativa.*
 
@@ -14,14 +17,9 @@ object gabriela {
 }
 
 object mariela {
-	method precioViaje(cliente,kilometros) {
-		if((cliente.precioPorKilometro() * kilometros) >= 50) {
-			return (cliente.precioPorKilometro() * kilometros)
-		}
-		else {
-			 return 50
-		}
-	} 
+	/* Aca debias usar el max() */
+	method precioViaje(cliente,kilometros) = 50.max(cliente.precioPorKilometro() * kilometros)
+		
 }
 
 object juana {
@@ -42,9 +40,9 @@ object lucia {
 		return self.remiseraActual().precioViaje(cliente,kilometros)
 	}		
 	
+	/*Este es un método de indicación no es un método de consulta */
 	method remiseraActual(remisera) {
 		remiseraActual = remisera
-		return remiseraActual
 	}
 	
 	method remiseraActual() {
